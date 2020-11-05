@@ -1,3 +1,55 @@
+Please use any image you want with the direction below for analysis.
+
+For this question you will implement the k-means clustering algorithm and apply it to color an image your choice. you are allowed to use these Python packages: pandas, numpy, skimage.io, matplotlib. First use the following code to load the image, which will give you a handle (i.e., img) of a (244, 198, 3) numpy.ndarray. The first two dimensions represent the height and width of the image. The last dimension represents the 3 color channels (RGB) for each pixel of the image.
+
+import skimage.io
+
+import matplotlib.pyplot as plt
+
+img = skimage.io.imread('your image')
+
+skimage.io.imshow(img)
+
+plt.show()
+
+Next implement the k-means algorithm to partition the 244×198 pixels into k clusters based on their RGB values and the Euclidean distance measure. Run your experiment with k = 2, 3, 6, 10 with the following given starting centroids:
+
+k = 2: (0, 0, 0), (0.1, 0.1, 0.1)
+
+k = 3: (0, 0, 0), (0.1, 0.1, 0.1), (0.2, 0.2, 0.2)
+
+k = 6: (0, 0, 0), (0.1, 0.1, 0.1), (0.2, 0.2, 0.2), (0.3, 0.3, 0.3), (0.4, 0.4, 0.4), (0.5, 0.5, 0.5)
+
+k = 10: (0, 0, 0), (0.1, 0.1, 0.1), (0.2, 0.2, 0.2), (0.3, 0.3, 0.3), (0.4, 0.4, 0.4), (0.5, 0.5, 0.5), (0.6, 0.6, 0.6), (0.7, 0.7, 0.7), (0.8, 0.8, 0.8), (0.9, 0.9, 0.9)
+
+For each value of k, you will run k-means until either convergence or your program has conducted 50 iterations over the data, whichever comes first.
+
+Deliverables:
+
+For each k = 2, 3, 6, 10, report the final SSE and re-color the pixels in each cluster using the following color scheme:
+
+Cluster 1. SpringGreen: (60, 179, 113)
+
+Cluster 2. DeepSkyBlue: (0, 191, 255)
+
+Cluster 3. Yellow: (255, 255, 0)
+
+Cluster 4. Red: (255, 0, 0)
+
+Cluster 5. Black: (0, 0, 0)
+
+Cluster 6. DarkGray: (169, 169, 169)
+
+Cluster 7. DarkOrange: (255, 140, 0)
+
+Cluster 8. Purple: (128, 0, 128)
+
+Cluster 9. Pink: (255, 192, 203)
+
+Cluster 10. White: (255, 255, 255)
+
+Submit the SSE values and colored images for each k, together with your program code in your homework submission. Note: You should normalize the data as a preprocessing step before proceeding with the clustering. Because the range of RGB is [0, 255], so please do the normalization using (R/255, G/255, B/255).
+
 ## Python packages: pandas, numpy, skimage.io, matplotlib
 
 
@@ -91,7 +143,7 @@ plot(img)
 ```
 
 
-![png](output_6_0.png)
+![png](output_7_0.png)
 
 
  #### (244, 198, 3) numpy.ndarray. The first two dimensions represent the height and width of the image. The last dimension represents the 3 color channels (RGB) for each pixel of the image.
@@ -197,7 +249,7 @@ for k in k_list:
     
 
 
-![png](output_14_1.png)
+![png](output_15_1.png)
 
 
     
@@ -214,7 +266,7 @@ for k in k_list:
     
 
 
-![png](output_14_3.png)
+![png](output_15_3.png)
 
 
     
@@ -232,7 +284,7 @@ for k in k_list:
     
 
 
-![png](output_14_5.png)
+![png](output_15_5.png)
 
 
     
@@ -253,7 +305,7 @@ for k in k_list:
     
 
 
-![png](output_14_7.png)
+![png](output_15_7.png)
 
 
     
